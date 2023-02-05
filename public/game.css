@@ -1,5 +1,6 @@
 html {
   overflow: hidden;
+  background-color: #ff5a;
 }
 
 .Opponent {
@@ -40,8 +41,8 @@ html {
 
 .gamebutton {
 	border: none;
-	background: #ddd;
-	color: #333;
+	background: #0b3954;
+	color: #fcf4f4;
 	padding: 10px 20px;
 	outline: none;
 	font-family: monospace;

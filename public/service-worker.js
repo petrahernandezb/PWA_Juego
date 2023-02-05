@@ -67,11 +67,11 @@ self.addEventListener('activate', (evt) => {
 
 self.addEventListener('fetch', (evt) => {
   // CODELAB: Add fetch event handler here.
-  // if (evt.request.mode !== 'navigate') {
-  //   // Not a page navigation, bail.
-  //   console.log("Fetch no navigate");
-  //   return;
-  // }
+  if (evt.request.mode !== 'navigate') {
+    // Not a page navigation, bail.
+    console.log("Fetch no navigate");
+    return;
+  }
   console.log('[ServiceWorker] Fetch', evt.request.url);
   evt.respondWith(
       caches.open(CACHE_NAME).then((cache) => {

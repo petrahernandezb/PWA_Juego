@@ -23,6 +23,21 @@ html {
 	}
 }
 
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	  -webkit-transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	  -webkit-transform: rotate(359deg);
+	}
+  }
+
+@-ms-viewport {
+	width: device-width;
+  }
+
 .gamebutton {
 	border: none;
 	background: #ddd;
@@ -31,4 +46,10 @@ html {
 	outline: none;
 	font-family: monospace;
 	cursor: pointer;
+}
+
+.copyright {
+	width: 229px;
+	height: 27px;
+	font-size: 12px;
 }

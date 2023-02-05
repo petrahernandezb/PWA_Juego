@@ -2,21 +2,59 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Shooter Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Una app de game">
+  <meta name="theme-color" content="#6200ee">
+  <meta name="apple-mobile-web-app-title" content="Game">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="./files/icons/camera192.png">
+  
+  <link rel="apple-touch-icon" href="./files/icons/camera128.png">
+  <link rel="apple-touch-icon" href="./files/icons/camera256.png">
+  <link rel="apple-touch-icon" href="./files/icons/camera512.png">
+  <link rel="apple-touch-icon" href="./files/icons/camera640.png">
+  <link rel="apple-touch-icon" href="./files/icons/camera960.png">
+  
+  <link rel="manifest" href="./files/manifest.json">
   <link type="text/css" rel="stylesheet" href="game.css">
-  <meta name="viewport" content="user-scalable=0"/>
-  <script src="Game.js" type="text/javascript"></script>
-  <script src="Entity.js" type="text/javascript"></script>
-  <script src="Character.js" type="text/javascript"></script>
-  <script src="Player.js" type="text/javascript"></script>
-  <script src="Opponent.js" type="text/javascript"></script>
-  <script src="Shot.js" type="text/javascript"></script>
-  <script src="main.js" type="text/javascript"></script>
-</head>
+  <title>Shooter Game</title></head>
 
 <body>
   <button id="pause" class="gamebutton" onclick="this.blur();">Pausa</button>
   <button id="reset" class="gamebutton" onclick="this.blur();">NUEVA PARTIDA</button>
+  <button id="butInstal" aria-label="Instal" hidden>INSTALAR APP JUEGO DE DISPAROS</button>
+
+  <script>
+   if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+  }
+
+    // if('serviceWorker' in navigator) {
+    //     window.addEventListener('load', ()=>{
+    //         navigator.serviceWorker.register('service-worker.js').then((reg)=>{
+    //             console.log("Service worker registered", reg);
+    //         })
+    //     })
+    // }
+ </script>
+ 
+
+ <script src="Game.js" type="text/javascript"></script>
+ <script src="./Entity.js" type="text/javascript"></script>
+ <script src="./Character.js" type="text/javascript"></script>
+ <script src="./Player.js" type="text/javascript"></script>
+ <script src="./Opponent.js" type="text/javascript"></script>
+ <script src="./Shot.js" type="text/javascript"></script>
+ <script src="./main.js" type="text/javascript"></script>
+ <script src="./files/install.js"></script> 
+ <div class="footer-sboard">
+  <p class="copyright">&copy; 
+      Copyright 2023| Petra Hernández Bustillo 
+  </p>
+</div>
+
 </body>
 
 </html>
